@@ -27,7 +27,11 @@ class Core{
 		}else{
 			$currentController = "homeController";
 			$currentAction = "index";
+		}
 
+		if (!file_exists('controllers/'.$currentController.'.php') || !method_exists($currentController, $currentAction)) {
+			$currentController = "notfoundController";
+			$currentAction = "index";
 		}
 
 		require_once('core/Controller.php');

@@ -7,7 +7,7 @@ define("BASE", 'http://localhost/twitter/');
 global $config;
 $config = array();
 if(ENVIRONMENT == "development"){
-	$config['dbname'] = 'twitter';
+	$config['dbname'] = 'blog';
 	$config['charset'] 	= 'utf8';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
